@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrismTabDemo.Views.MenuPage"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             android:TabbedPage.ToolbarPlacement="Bottom"
+             xmlns:views="clr-namespace:PrismTabDemo.Views">
+  <!--Pages can be added as references or inline-->
+    <TabbedPage Title="Tab 1">
+        <views:SubtabPage1 Title="Sub Tab 1"/>
+        <NavigationPage Title="Sub Tab 1">
+            <x:Arguments>
+                <views:SubtabPage2 Title="Main Navi"/>
+            </x:Arguments>
+        </NavigationPage>
+    </TabbedPage>
+    <ContentPage Title="Tab 2" />
+    <ContentPage Title="Tab 3" />
+</TabbedPage>
